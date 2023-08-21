@@ -1,0 +1,42 @@
+package:
+  dependencies:
+    - console
+    - effect
+    - prelude
+  name: pursuit-server
+  test:
+    dependencies: []
+    main: Test.Pursuit.Server.Main
+
+# optional
+  bundle:
+    # optional, Boolean, whether to minify
+    minify: true
+    # optional, String, the module name to bundle
+    module: Pursuit.Server.Main
+    # optional, String, the file to which to output
+    outfile: "index.js"
+    # optional, "node" or "browser"
+    platform: "node"
+    # optional, "app" or "module"
+    type: "app"
+
+# optional
+  run:
+    # optional, String, the module that has the `main :: Effect Unit` function
+    main: "Pursuit.Server.Main"
+    # optional, Array String, args to pass to the program
+    # execArgs: 
+    #   - "--cli-arg"
+    #   - "foo"
+
+  # optional
+  build_opts:
+    # optional, Boolean, fail the build if `spago.yml` has redundant/missing packages
+    pedantic_packages: true
+    # optional, whether to censor warnings from dependency sources,
+    # project sources, both, or none
+    censor_warnings: "dependency"
+    show_source: true
+    strict: true
+    stash: true

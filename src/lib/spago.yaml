@@ -1,0 +1,21 @@
+package:
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - routing-duplex
+  name: pursuit-lib
+  test:
+    dependencies: []
+    main: Test.Pursuit.Lib.Main
+
+  # optional
+  build_opts:
+    # optional, Boolean, fail the build if `spago.yml` has redundant/missing packages
+    pedantic_packages: true
+    # optional, whether to censor warnings from dependency sources,
+    # project sources, both, or none
+    censor_warnings: "dependency"
+    show_source: true
+    strict: true
+    stash: true

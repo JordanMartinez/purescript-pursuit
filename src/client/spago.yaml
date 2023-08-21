@@ -1,0 +1,22 @@
+package:
+  dependencies:
+    - console
+    - effect
+    - halogen
+    - halogen-hooks-extra
+    - prelude
+  name: pursuit-client
+  test:
+    dependencies: []
+    main: Test.Pursuit.Client.Main
+
+  # optional
+  build_opts:
+    # optional, Boolean, fail the build if `spago.yml` has redundant/missing packages
+    pedantic_packages: true
+    # optional, whether to censor warnings from dependency sources,
+    # project sources, both, or none
+    censor_warnings: "dependency"
+    show_source: true
+    strict: true
+    stash: true
