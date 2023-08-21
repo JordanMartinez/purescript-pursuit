@@ -1,0 +1,47 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.47.0",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss": "^8.4.28",
+    "postcss-loader": "^7.3.3",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^9.1.1",
+    "purescript": "^0.15.10",
+    "purs-backend-es": "^1.4.0",
+    "purs-tidy": "^0.10.0",
+    "spago": "^0.93.10",
+    "style-loader": "^3.3.3",
+    "stylelint": "^15.10.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "name": "my-webpack-project",
+  "scripts": {
+    "spago:build": "spago build",
+    "spago:optimize": "purs-backend-es build --int-tags",
+    "webpack:dev": "webpack --mode=development",
+    "webpack:prod": "webpack --mode=production --node-env=production",
+    "webpack:watch": "webpack --watch",
+    "webpack:serve": "webpack serve",
+    "build:client": "npm run spago:build && npm run spago:optimize && npm run webpack:prod",
+    "build:client:dev": "npm run spago:build && npm run webpack:dev",
+    "esbuild:build": "esbuild  --define:USE_OUTPUT_ES=true --bundle pursuit-server-entry.js --outfile=dist/server/pursuit-server.mjs --minify --format=esm --platform=node",
+    "esbuild:build:dev": "esbuild --define:ENTRY_POINT=\\\"./output/Pursuit.Server.Main/index.js\\\" --bundle pursuit-server-entry.js --outfile=dist/server/pursuit-server.mjs --format=esm --platform=node",
+    "build:server": "npm run spago:build && npm run spago:optimize && npm run esbuild:build",
+    "build:server:dev": "npm run spago:build && npm run esbuild:build:dev",
+    "build": "npm run build:client && npm run build:server",
+    "build:dev": "npm run build:client:dev && npm run build:server:dev",
+    "lint:style": "stylelint src/client/app/**/*.css",
+    "lint:js": "eslint *.js src/**/*.js",
+    "lint:code": "purs-tidy check src/client src/lib src/server"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
