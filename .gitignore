@@ -9,3 +9,12 @@ generated-docs/
 .purs*
 .psa*
 .spago
+
+# VS Code
+.vscode/
+
+# purs-backend-es
+output-es/
+
+# webpack
+dist/
