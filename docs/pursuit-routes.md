@@ -39,7 +39,7 @@ Copied from [pursuit](https://github.com/purescript/pursuit/blob/master/config/r
 | GET | /static/js/html5shiv.js | [Repo](https://github.com/aFarkas/html5shiv): The HTML5 Shiv enables use of HTML5 sectioning elements in legacy Internet Explorer and provides basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x. |
 | GET | /static/js/js.cookie.js | [Repo](https://github.com/js-cookie/js-cookie): A simple, lightweight JavaScript API for handling cookies |
 | GET | /static/js/Pursuit.js | Defines 3 functions. <ol><li>`initializeVersionSelector` - adds the package's versions to the version selector dropdown using data from `!/packages/<packageName>/available-versions`</li><li>`initializeSearchForm` - adds "focus-on-`S`" keypress listener, placeholder handling depending on if focused, trims search input, renders any messages</li><li>`initializeLoadMoreLink` - sets up the 'load more' link when a search has more results than initially shown</li></ol> |
-| GET | /static/opensearchdescription.xml | ??? |
+| GET | /static/opensearchdescription.xml | See [OpenSearch 1.1 Draft 6](https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md) |
 | GET | `/robots.txt` | Robots file |
 | GET | `/` | Home page. Content includes docs for sample searches, how to publish, how to contribute, list of latest uploads, and then package index |
 | GET | `/packages` | Redirects to `/` | 
