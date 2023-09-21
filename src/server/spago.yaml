@@ -3,6 +3,7 @@ package:
     - console
     - effect
     - prelude
+    - render-xml
   name: pursuit-server
   test:
     dependencies: []

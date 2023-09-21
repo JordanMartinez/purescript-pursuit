@@ -1,4 +1,22 @@
 workspace:
-  extra_packages: {}
+  extra_packages: 
+    render-xml:
+      repo: "https://github.com/JordanMartinez/purescript-render-xml.git"
+      version: "c9b9881a69651a0759aaecc93f7642d1fa137ec7"
+      dependencies: 
+        - arrays
+        - dom-indexed
+        - foldable-traversable
+        - maybe
+        - media-types
+        - newtype
+        - prelude
+        - safe-coerce
+        - strings
+        - tuples
+        - typelevel-prelude
+        - unsafe-coerce
+        - web-pointerevents
+
   package_set:
     registry: 36.2.0
